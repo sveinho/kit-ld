@@ -308,12 +308,16 @@ button {
 }
 
 .global-tag-cloud.hidden {
-  display: flex !important;
+  /* When hidden, remove from layout and disable interaction.
+     Use display:none to avoid conflicts with the global .hidden utility
+     and to ensure the element is truly removed from the flow. Keep
+     max-height/opacity for compatibility with transitions if needed. */
   max-height: 0 !important;
   opacity: 0 !important;
   margin-top: 0 !important;
-  visibility: hidden;
-  pointer-events: none;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  display: none !important;
 }
 
 .global-tag-btn {
