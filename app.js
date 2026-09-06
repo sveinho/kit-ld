@@ -131,6 +131,11 @@ class KitApp {
     });
     url.hash = hash ? (hash.startsWith('#') ? hash.slice(1) : hash) : '';
     history.pushState({}, '', url);
+
+    // Re-run route logic so UI (tags, modules, active article) updates immediately
+    // after a programmatic URL change.
+    // Note: this does not detect manual edits to the address bar without reload.
+    this._applyRoute();
   }
 
   _applyRoute() {
