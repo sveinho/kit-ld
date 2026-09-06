@@ -364,7 +364,7 @@ class KitApp {
     const badgeClass = `badge discipline-badge${isExpanded ? ' is-open' : ''}`;
 
     return `
-      <article class="filterable" data-id="${currentId}">
+      <article class="filterable" data-id="${currentId}" data-track="${this._escapeHtml(article.track || '')}">
         <div class="article-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:15px;">
           <h2 class="article-title-clickable" style="cursor:pointer;margin:0;">${titleHtml}</h2>
           <button class="${badgeClass}" data-id="${currentId}" style="cursor:pointer;flex-shrink:0;white-space:nowrap;">
