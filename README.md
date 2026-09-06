@@ -1,5 +1,11 @@
 An early mockup of Support kit T3.3
 
+Run a linter/validator:
+CSS: https://jigsaw.w3.org/css-validator/ or stylelint
+JSON: https://jsonlint.com/
+Vamilla JS: 
+(HTML: https://validator.w3.org/)
+
 ### index.json is the basis for the full content. 
 encoding can be html, plain or markdown in the json text field, but only markdown is used at this point in time.
 
