@@ -184,22 +184,22 @@
 
 <div class="container">
     <div class="header-bar">
-        <h2>JSON Modul- og Batch Editor</h2>
+        <h2>JSON Module & Batch Editor</h2>
         <div>
             <input type="file" id="fileInput" accept=".json" style="display: none;">
-            <button class="btn" onclick="document.getElementById('fileInput').click()">Last inn JSON-fil</button>
-            <button class="btn btn-save" onclick="saveAllModules()">Eksporter hele filen</button>
+            <button class="btn" onclick="document.getElementById('fileInput').click()">Load JSON File</button>
+            <button class="btn btn-save" onclick="saveAllModules()">Export Full File</button>
         </div>
     </div>
 
     <div class="main-layout">
         <!-- Venstre panel: Modulvelger -->
         <div class="sidebar">
-            <button class="btn" style="background-color: #4a5568;" onclick="createNewModule()">+ Ny modul</button>
-            <label>Moduler i filen</label>
+            <button class="btn" style="background-color: #4a5568;" onclick="createNewModule()">+ New Module</button>
+            <label>Modules in File</label>
             <div id="moduleList" class="module-list">
                 <!-- Moduler dukker opp her dynamisk -->
-                <div style="color: #a0aec0; font-size: 0.85rem; padding: 10px;">Ingen fil lastet inn ennå...</div>
+                <div style="color: #a0aec0; font-size: 0.85rem; padding: 10px;">No file loaded yet...</div>
             </div>
         </div>
 
@@ -223,15 +223,15 @@
                     <input type="text" id="order" oninput="syncCurrentData()">
                 </div>
                 <div class="meta-group span-2">
-                    <label for="name">Navn / Tittel</label>
+                    <label for="name">Name / Title</label>
                     <input type="text" id="name" oninput="syncCurrentData()">
                 </div>
                 <div class="meta-group span-2">
-                    <label for="keywords">Keywords (separert med komma)</label>
+                    <label for="keywords">Keywords (comma separated)</label>
                     <input type="text" id="keywords" oninput="syncCurrentData()">
                 </div>
                 <div class="meta-group span-4">
-                    <label for="description">Kort beskrivelse (Description)</label>
+                    <label for="description">Short Description</label>
                     <textarea id="description" rows="2" oninput="syncCurrentData()"></textarea>
                 </div>
             </div>
@@ -240,10 +240,10 @@
             <div class="workspace">
                 <div class="pane">
                     <label>Markdown Editor</label>
-                    <textarea id="text" class="md-input" placeholder="Skriv din markdown her..." oninput="syncCurrentData()"></textarea>
+                    <textarea id="text" class="md-input" placeholder="Type your markdown here..." oninput="syncCurrentData()"></textarea>
                 </div>
                 <div class="pane">
-                    <label>Eksport-forhåndsvisning (Gjeldende objekt som JSON-streng)</label>
+                    <label>Export Preview (Current object as JSON string)</label>
                     <pre id="jsonPreview" class="json-preview"></pre>
                 </div>
             </div>
