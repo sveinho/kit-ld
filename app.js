@@ -315,13 +315,13 @@ class KitApp {
         }
       }
       
-      const currentTrack = article.audience?.educationalRole || article.educationalLevel || article.track;
+      const currentTrack = article.track;
       const currentOrder = parseInt(article.order || 0, 10);
       
       // FIXED: Adaptive verification strategy handles gaps in modular indexing sequences safely
       const next = this._state.all
         .filter((a) => {
-          const t = a.audience?.educationalRole || a.educationalLevel || a.track;
+          const t = a.track;
           const o = parseInt(a.order || 0, 10);
           return t === currentTrack && o > currentOrder;
         })
@@ -455,7 +455,7 @@ class KitApp {
     const targetParams = { track };
     if (this._state.tagFilter) targetParams.tag = this._state.tagFilter;
 
-    const currentTrack = activeArticle?.audience?.educationalRole || activeArticle?.educationalLevel || activeArticle?.track;
+    const currentTrack = activeArticle?.track;
 
     if (activeArticle && track !== 'all' && currentTrack !== track) {
       this._state.activeId = null;
