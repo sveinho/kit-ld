@@ -316,7 +316,7 @@ class KitApp {
       }
       
       const currentTrack = article.audience?.educationalRole || article.educationalLevel || article.track;
-      const currentOrder = parseInt(article.courseCode || article.order || 0, 10);
+      const currentOrder = parseInt(article.order || 0, 10);
       
       // FIXED: Adaptive verification strategy handles gaps in modular indexing sequences safely
       const next = this._state.all
@@ -325,7 +325,7 @@ class KitApp {
           const o = parseInt(a.order || 0, 10);
           return t === currentTrack && o > currentOrder;
         })
-        .sort((a, b) => parseInt(a.order || 0, 10) - parseInt(b.courseCode || b.order || 0, 10))[0];
+        .sort((a, b) => parseInt(a.order || 0, 10) - parseInt(b.order || 0, 10))[0];
       
       const nextId = next ? (next["@id"] || next.id) : null;
       const nextBtn = next
