@@ -56,7 +56,6 @@
       "dashboards",
       "bi"
     ],
-    "@type": "EducationalAudience",
     "encodingFormat": "text/markdown",
     "text": "#### Sections for training on TopicX\n[Tutorial](#tutorial) | [How-to](#how-to) | [Reference](#reference) | [Explanation](#explanation)\n\n### Svein\nMorbi convallis auctor augue quis pharetra. Eskil convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### How-to\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### Reference\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis. \n### Explanation\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n\n[Go to top](#data-management-trainers)"
   },
@@ -96,7 +95,7 @@
     "name": "Planning reuse and data sharing in research projects",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #1",
-    "courseCode": "1",
+    "courseCode": "6",
     "keywords": [
       "reuse",
       "sharing",
@@ -114,7 +113,7 @@
     "name": "Deciding on a repository for your research data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #2",
-    "courseCode": "2",
+    "courseCode": "7",
     "keywords": [
       "EDEN registry",
       "re3data",
@@ -129,7 +128,7 @@
     "name": "Aligning data to community norms",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #3",
-    "courseCode": "3",
+    "courseCode": "8",
     "keywords": [
       "community watch",
       "community engagement",
@@ -144,7 +143,7 @@
     "name": "Preparing deposits - file formats and technical data quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #4",
-    "courseCode": "4",
+    "courseCode": "9",
     "keywords": [
       "community watch",
       "community engagement",
@@ -159,7 +158,7 @@
     "name": "Preparing metadata - reusing information and metadata quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #5",
-    "courseCode": "5",
+    "courseCode": "10",
     "keywords": [
       "community watch",
       "community engagement",
@@ -174,7 +173,7 @@
     "name": "Negotiating quality optimisation - technical, metadata, contextual quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #6",
-    "courseCode": "6",
+    "courseCode": "11",
     "keywords": [
       "community watch",
       "community engagement",
@@ -189,7 +188,7 @@
     "name": "Understanding rights and defining terms for reuse of the data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #7",
-    "courseCode": "7",
+    "courseCode": "12",
     "keywords": [
       "community watch",
       "community engagement",
@@ -204,7 +203,7 @@
     "name": "Teaching Data Management",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #1",
-    "courseCode": "1",
+    "courseCode": "13",
     "keywords": [
       "teaching",
       "workshop",
@@ -219,7 +218,7 @@
     "name": "Curriculum Design for Data Literacy",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #2",
-    "courseCode": "2",
+    "courseCode": "1",
     "keywords": [
       "curriculum",
       "workshop",
@@ -234,7 +233,7 @@
     "name": "Measuring Training Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #3",
-    "courseCode": "3",
+    "courseCode": "2",
     "keywords": [
       "evaluation",
       "feedback",
@@ -249,7 +248,7 @@
     "name": "Measuring progress Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #4",
-    "courseCode": "4",
+    "courseCode": "1",
     "keywords": [
       "evaluation",
       "feedback",
@@ -264,7 +263,7 @@
     "name": "Assessing Training Import",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #5",
-    "courseCode": "5",
+    "courseCode": "2",
     "keywords": [
       "evaluation",
       "feedback",
