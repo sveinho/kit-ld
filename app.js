@@ -191,7 +191,7 @@ class KitApp {
 
     let result = all.filter((a) => {
       const articleTags = a.keywords || a.tags;
-      const articleTrack = a.audience?.educationalRole || a.educationalLevel || a.track;
+      const articleTrack = a.track;
 
       if (trackFilter !== 'all' && articleTrack !== trackFilter) return false;
       if (tagFilter && !articleTags?.includes(tagFilter)) return false;
@@ -228,13 +228,13 @@ class KitApp {
       result.sort((a, b) => scoreOf(b.name || b.title) - scoreOf(a.name || a.title) || (a.name || a.title || '').localeCompare(b.name || b.title || ''));
     } else {
       result.sort((a, b) => {
-        const ta = a.audience?.educationalRole || a.educationalLevel || a.track || '';
+        const ta = a.track;
         // FIXED: Replaced 'b.trackFilter' typo with accurate structured key targeting configuration blocks
-        const tb = b.audience?.educationalRole || b.educationalLevel || b.track || '';
+        const tb = b.track;
         if (ta !== tb) return ta.localeCompare(tb);
         
-        const orderA = parseInt(a.order || 0, 10);
-        const orderB = parseInt(b.order || 0, 10);
+        const orderA = parseInt(a.order || 0, 100);
+        const orderB = parseInt(b.order || 0, 100);
         return orderA - orderB;
       });
     }
