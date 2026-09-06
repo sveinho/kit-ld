@@ -427,15 +427,15 @@ article.filterable:hover {
   box-shadow: 0 2px 6px rgba(13, 33, 115, 0.2);
 }
 
-/* Role Theme Injection Classes */
-article.filterable[data-id*="-researchers"] { border-left-color: var(--bg-researcher-badge); }
-article.filterable[data-id*="-researchers"] .discipline-badge { background: var(--bg-researcher-badge); color: #fff; }
+/* Role Theme Injection Classes — use data-track (source of truth) instead of id substring */
+article.filterable[data-track="researchers"] { border-left-color: var(--bg-researcher-badge); }
+article.filterable[data-track="researchers"] .discipline-badge { background: var(--bg-researcher-badge); color: #fff; }
 
-article.filterable[data-id*="-managers"] { border-left-color: var(--bg-manager-badge); }
-article.filterable[data-id*="-managers"] .discipline-badge { background: var(--bg-manager-badge); color: #fff; }
+article.filterable[data-track="managers"] { border-left-color: var(--bg-manager-badge); }
+article.filterable[data-track="managers"] .discipline-badge { background: var(--bg-manager-badge); color: #fff; }
 
-article.filterable[data-id*="-trainers"] { border-left-color: var(--bg-trainer-badge); }
-article.filterable[data-id*="-trainers"] .discipline-badge { background: var(--bg-trainer-badge); color: #fff; }
+article.filterable[data-track="trainers"] { border-left-color: var(--bg-trainer-badge); }
+article.filterable[data-track="trainers"] .discipline-badge { background: var(--bg-trainer-badge); color: #fff; }
 
 .abstract-text {
   color: var(--text-muted);
