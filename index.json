@@ -228,11 +228,12 @@
   },
   {
     "track": "researchers",
+    "order": "4",
     "id": "curriculum-trainers",
     "name": "Curriculum Design for Data Literacy",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #4",
-    "courseCode": "1",
+    "courseCode": "4",
     "keywords": [
       "curriculum",
       "workshop",
@@ -243,11 +244,12 @@
   },
   {
     "track": "researchers",
+    "order": "5",
     "id": "evaluation-trainers",
     "name": "Measuring Training Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #5",
-    "courseCode": "2",
+    "courseCode": "5",
     "keywords": [
       "evaluation",
       "feedback",
@@ -258,6 +260,7 @@
   },
   {
     "track": "trainers",
+    "order": "1",
     "id": "four-trainers",
     "name": "Measuring progress Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
@@ -273,6 +276,7 @@
   },
   {
     "track": "trainers",
+    "order": "2",
     "id": "five-trainers",
     "name": "Assessing Training Import",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
