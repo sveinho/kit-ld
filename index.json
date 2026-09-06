@@ -1,6 +1,7 @@
 [
   {
     "track": "information",
+    "order": "1",
     "id": "navigating-kit",
     "name": "Navigating the support kit",
     "description": "First you will need to choose a learning path to get started. Choose the one that aligns best with your relevant role: researcher, manager or trainer. The same topic can often be described within all three learning paths and based on this: You should limit your search or widening it to include the wanted learning paths (either one or all). You will need to use three or more letters in a search. All modules are interactive and can be opened or closed according to your preference. Hopefully, this is enough information to navigate this resource. Lets get started.",
@@ -16,6 +17,7 @@
   },
   {
     "track": "managers",
+    "order": "1",
     "id": "context-managers",
     "name": "Defining context (data governance for a TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
@@ -31,6 +33,7 @@
   },
   {
     "track": "managers",
+    "order": "2",
     "id": "standards-managers",
     "name": "Defining data standards (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
@@ -46,6 +49,7 @@
   },
   {
     "track": "managers",
+    "order": "3",
     "id": "roles-managers",
     "name": "Defining roles and competence (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
@@ -61,6 +65,7 @@
   },
   {
     "track": "managers",
+    "order": "4",
     "id": "legal-managers",
     "name": "Defining Legal & Ethical aspects (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
@@ -76,6 +81,7 @@
   },
   {
     "track": "managers",
+    "order": "5",
     "id": "requirements-deposits-managers",
     "name": "Defining recommendations and requirements for deposits",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
@@ -91,10 +97,11 @@
   },
   {
     "track": "managers",
+    "order": "6",
     "id": "data-management-researchers",
     "name": "Planning reuse and data sharing in research projects",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #1",
+    "discipline": "Manager Module #6",
     "courseCode": "6",
     "keywords": [
       "reuse",
@@ -109,10 +116,11 @@
   },
   {
     "track": "managers",
+    "order": "7",
     "id": "data-sharing-researchers",
     "name": "Deciding on a repository for your research data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #2",
+    "discipline": "Manager Module #7",
     "courseCode": "7",
     "keywords": [
       "EDEN registry",
@@ -124,10 +132,11 @@
   },
   {
     "track": "managers",
+    "order": "8",
     "id": "preservation-researchers",
     "name": "Aligning data to community norms",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #3",
+    "discipline": "Manager Module #8",
     "courseCode": "8",
     "keywords": [
       "community watch",
@@ -139,10 +148,11 @@
   },
   {
     "track": "managers",
+    "order": "9",
     "id": "preparing-researchers",
     "name": "Preparing deposits - file formats and technical data quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #4",
+    "discipline": "Manager Module #9",
     "courseCode": "9",
     "keywords": [
       "community watch",
@@ -154,10 +164,11 @@
   },
   {
     "track": "managers",
+    "order": "10",
     "id": "metadata-researchers",
     "name": "Preparing metadata - reusing information and metadata quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #5",
+    "discipline": "Manager Module #1",
     "courseCode": "10",
     "keywords": [
       "community watch",
@@ -168,11 +179,12 @@
     "text": "#### Sections for training on TopicX\n[Tutorial](#tutorial) | [How-to](#how-to) | [Reference](#reference) | [Explanation](#explanation)\n\n### Svein\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### How-to\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### Reference\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis. \n### Explanation\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n\n[Go to top](#data-management-trainers)"
   },
   {
-    "track": "managers",
+    "track": "researchers",
+    "order": "1",
     "id": "negotiating-researchers",
     "name": "Negotiating quality optimisation - technical, metadata, contextual quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #6",
+    "discipline": "Researcher Module #1",
     "courseCode": "11",
     "keywords": [
       "community watch",
@@ -183,12 +195,13 @@
     "text": "#### Sections for training on TopicX\n[Tutorial](#tutorial) | [How-to](#how-to) | [Reference](#reference) | [Explanation](#explanation)\n\n### Svein\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### How-to\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### Reference\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis. \n### Explanation\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n\n[Go to top](#data-management-trainers)"
   },
   {
-    "track": "managers",
+    "track": "researchers",
+    "order": "2",
     "id": "terms-researchers",
     "name": "Understanding rights and defining terms for reuse of the data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Researcher Module #7",
-    "courseCode": "12",
+    "discipline": "Researcher Module #2",
+    "courseCode": "2",
     "keywords": [
       "community watch",
       "community engagement",
@@ -198,12 +211,13 @@
     "text": "#### Sections for training on TopicX\n[Tutorial](#tutorial) | [How-to](#how-to) | [Reference](#reference) | [Explanation](#explanation)\n\n### Svein\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### How-to\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n### Reference\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis. \n### Explanation\n\nMorbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in venenatis urna. Nulla facilisi. Aliquam maximus mi eu arcu hendrerit, vitae laoreet felis egestas. Fusce sed efficitur libero, a hendrerit mauris. Maecenas orci ante, consectetur sed neque ac, luctus faucibus est. Sed eu felis mauris. Sed a libero non tellus finibus tempor vitae sit amet tortor. Donec consequat tellus sed tristique pharetra. Etiam massa lorem, tempus maximus varius at, ultricies quis diam. Sed elementum posuere nunc, a fermentum tortor vehicula sit amet. Quisque eget ultrices metus. Cras nisl libero, placerat eget tincidunt vel, bibendum ut odio. Cras vitae viverra quam, nec luctus nibh. Vestibulum lorem nibh, egestas nec tempus ut, vehicula sed odio. Aenean placerat facilisis tortor ut mattis.\n\n[Go to top](#data-management-trainers)"
   },
   {
-    "track": "managers",
+    "track": "researchers",
+    "order": "3",
     "id": "data-management-trainers",
     "name": "Teaching Data Management",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Trainer Module #1",
-    "courseCode": "13",
+    "discipline": "Researcher Module #3",
+    "courseCode": "3",
     "keywords": [
       "teaching",
       "workshop",
@@ -217,7 +231,7 @@
     "id": "curriculum-trainers",
     "name": "Curriculum Design for Data Literacy",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Trainer Module #2",
+    "discipline": "Researcher Module #4",
     "courseCode": "1",
     "keywords": [
       "curriculum",
@@ -232,7 +246,7 @@
     "id": "evaluation-trainers",
     "name": "Measuring Training Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Trainer Module #3",
+    "discipline": "Researcher Module #5",
     "courseCode": "2",
     "keywords": [
       "evaluation",
@@ -247,7 +261,7 @@
     "id": "four-trainers",
     "name": "Measuring progress Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Trainer Module #4",
+    "discipline": "Trainer Module #1",
     "courseCode": "1",
     "keywords": [
       "evaluation",
@@ -262,7 +276,7 @@
     "id": "five-trainers",
     "name": "Assessing Training Import",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Trainer Module #5",
+    "discipline": "Trainer Module #2",
     "courseCode": "2",
     "keywords": [
       "evaluation",
