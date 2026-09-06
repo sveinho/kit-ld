@@ -2,7 +2,7 @@
   {
     "track": "info",
     "order": "1",
-    "id": "navigating-kit",
+    "@id": "navigating-kit",
     "name": "Navigating the support kit",
     "description": "First you will need to choose a learning path to get started. Choose the one that aligns best with your relevant role: researcher, manager or trainer. The same topic can often be described within all three learning paths and based on this: You should limit your search or widening it to include the wanted learning paths (either one or all). You will need to use three or more letters in a search. All modules are interactive and can be opened or closed according to your preference. Hopefully, this is enough information to navigate this resource. Lets get started.",
     "discipline": "Information",
@@ -17,7 +17,7 @@
   {
     "track": "managers",
     "order": "1",
-    "id": "context-managers",
+    "@id": "context-managers",
     "name": "Defining context (data governance for a TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #1",
@@ -32,7 +32,7 @@
   {
     "track": "managers",
     "order": "2",
-    "id": "standards-managers",
+    "@id": "standards-managers",
     "name": "Defining data standards (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #2",
@@ -47,7 +47,7 @@
   {
     "track": "managers",
     "order": "3",
-    "id": "roles-managers",
+    "@id": "roles-managers",
     "name": "Defining roles and competence (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #3",
@@ -62,7 +62,7 @@
   {
     "track": "managers",
     "order": "4",
-    "id": "legal-managers",
+    "@id": "legal-managers",
     "name": "Defining Legal & Ethical aspects (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #4",
@@ -77,7 +77,7 @@
   {
     "track": "managers",
     "order": "5",
-    "id": "requirements-deposits-managers",
+    "@id": "requirements-deposits-managers",
     "name": "Defining recommendations and requirements for deposits",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #5",
@@ -92,7 +92,7 @@
   {
     "track": "managers",
     "order": "6",
-    "id": "data-management-researchers",
+    "@id": "data-management-researchers",
     "name": "Planning reuse and data sharing in research projects",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #6",
@@ -110,7 +110,7 @@
   {
     "track": "managers",
     "order": "7",
-    "id": "data-sharing-researchers",
+    "@id": "data-sharing-researchers",
     "name": "Deciding on a repository for your research data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #7",
@@ -125,7 +125,7 @@
   {
     "track": "managers",
     "order": "8",
-    "id": "preservation-researchers",
+    "@id": "preservation-researchers",
     "name": "Aligning data to community norms",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #8",
@@ -140,7 +140,7 @@
   {
     "track": "managers",
     "order": "9",
-    "id": "preparing-researchers",
+    "@id": "preparing-researchers",
     "name": "Preparing deposits - file formats and technical data quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #9",
@@ -155,7 +155,7 @@
   {
     "track": "managers",
     "order": "10",
-    "id": "metadata-researchers",
+    "@id": "metadata-researchers",
     "name": "Preparing metadata - reusing information and metadata quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #10",
@@ -170,7 +170,7 @@
   {
     "track": "researchers",
     "order": "1",
-    "id": "negotiating-researchers",
+    "@id": "negotiating-researchers",
     "name": "Negotiating quality optimisation - technical, metadata, contextual quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #1",
@@ -185,7 +185,7 @@
   {
     "track": "researchers",
     "order": "2",
-    "id": "terms-researchers",
+    "@id": "terms-researchers",
     "name": "Understanding rights and defining terms for reuse of the data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #2",
@@ -200,7 +200,7 @@
   {
     "track": "researchers",
     "order": "3",
-    "id": "data-management-trainers",
+    "@id": "data-management-trainers",
     "name": "Teaching Data Management",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #3",
@@ -215,7 +215,7 @@
   {
     "track": "researchers",
     "order": "4",
-    "id": "curriculum-trainers",
+    "@id": "curriculum-trainers",
     "name": "Curriculum Design for Data Literacy",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #4",
@@ -230,7 +230,7 @@
   {
     "track": "researchers",
     "order": "5",
-    "id": "evaluation-trainers",
+    "@id": "evaluation-trainers",
     "name": "Measuring Training Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #5",
@@ -245,7 +245,7 @@
   {
     "track": "trainers",
     "order": "1",
-    "id": "four-trainers",
+    "@id": "four-trainers",
     "name": "Measuring progress Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #1",
@@ -260,7 +260,7 @@
   {
     "track": "trainers",
     "order": "2",
-    "id": "five-trainers",
+    "@id": "five-trainers",
     "name": "Assessing Training Import",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #2",
