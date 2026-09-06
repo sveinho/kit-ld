@@ -146,7 +146,7 @@ class KitApp {
       btn.classList.toggle('active', isTargetActive);
     });
 
-    if (id && this._state.all.some((a) => (a["@id"] === id)) {
+    if (id && this._state.all.some((a) => a["@id"] === id)) {
       this._state.activeId = id;
       this._state.tagFilter = null;
       this._filter(false);
@@ -330,9 +330,9 @@ class KitApp {
         })
         .sort((a, b) => parseInt(a.order || 0, 10) - parseInt(b.order || 0, 10))[0];
       
-      const nextId = next ? (next["@id"] : null;
+      const nextId = next ? next["@id"] : null;
       const nextBtn = next
-        ? `<button class="next-step-btn" data-next-id="${nextId}">Neste modul →</button>`
+        ? `<button class="next-step-btn" data-next-id="${this._escapeHtml(nextId)}">Neste modul →</button>`
         : '';
 
       expandedHtml = `
@@ -455,7 +455,7 @@ class KitApp {
     this._filterButtons.forEach((b) => b.classList.toggle('active', b === activeBtn));
     
     const activeArticle = this._state.activeId
-      ? this._state.all.find((a) => (a["@id"] === this._state.activeId)
+      ? this._state.all.find((a) => a["@id"] === this._state.activeId)
       : null;
       
     const targetParams = { track };
@@ -499,7 +499,7 @@ class KitApp {
     }
     this._state.activeId = id;
     
-    const article = this._state.all.find((a) => (a["@id"] === id);
+    const article = this._state.all.find((a) => a["@id"] === id);
     
     const targetParams = { id };
     if (this._state.trackFilter && this._state.trackFilter !== 'all') {
