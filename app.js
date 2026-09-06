@@ -233,8 +233,8 @@ class KitApp {
         const tb = b.audience?.educationalRole || b.educationalLevel || b.track || '';
         if (ta !== tb) return ta.localeCompare(tb);
         
-        const orderA = parseInt(a.courseCode || a.order || 0, 10);
-        const orderB = parseInt(b.courseCode || b.order || 0, 10);
+        const orderA = parseInt(a.order || 0, 10);
+        const orderB = parseInt(b.order || 0, 10);
         return orderA - orderB;
       });
     }
@@ -322,10 +322,10 @@ class KitApp {
       const next = this._state.all
         .filter((a) => {
           const t = a.audience?.educationalRole || a.educationalLevel || a.track;
-          const o = parseInt(a.courseCode || a.order || 0, 10);
+          const o = parseInt(a.order || 0, 10);
           return t === currentTrack && o > currentOrder;
         })
-        .sort((a, b) => parseInt(a.courseCode || a.order || 0, 10) - parseInt(b.courseCode || b.order || 0, 10))[0];
+        .sort((a, b) => parseInt(a.order || 0, 10) - parseInt(b.courseCode || b.order || 0, 10))[0];
       
       const nextId = next ? (next["@id"] || next.id) : null;
       const nextBtn = next
