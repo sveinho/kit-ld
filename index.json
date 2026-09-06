@@ -6,7 +6,6 @@
     "name": "Navigating the support kit",
     "description": "First you will need to choose a learning path to get started. Choose the one that aligns best with your relevant role: researcher, manager or trainer. The same topic can often be described within all three learning paths and based on this: You should limit your search or widening it to include the wanted learning paths (either one or all). You will need to use three or more letters in a search. All modules are interactive and can be opened or closed according to your preference. Hopefully, this is enough information to navigate this resource. Lets get started.",
     "discipline": "Information",
-    "courseCode": "1",
     "keywords": [
       "learning",
       "training",
@@ -22,7 +21,6 @@
     "name": "Defining context (data governance for a TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #1",
-    "courseCode": "1",
     "keywords": [
       "governance",
       "compliance",
@@ -38,7 +36,6 @@
     "name": "Defining data standards (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #2",
-    "courseCode": "2",
     "keywords": [
       "security",
       "risk",
@@ -54,7 +51,6 @@
     "name": "Defining roles and competence (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #3",
-    "courseCode": "3",
     "keywords": [
       "analytics",
       "dashboards",
@@ -70,7 +66,6 @@
     "name": "Defining Legal & Ethical aspects (data governance for TDR/A)",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #4",
-    "courseCode": "4",
     "keywords": [
       "analytics",
       "dashboards",
@@ -86,7 +81,6 @@
     "name": "Defining recommendations and requirements for deposits",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #5",
-    "courseCode": "5",
     "keywords": [
       "arena",
       "lights",
@@ -102,7 +96,6 @@
     "name": "Planning reuse and data sharing in research projects",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #6",
-    "courseCode": "6",
     "keywords": [
       "reuse",
       "sharing",
@@ -121,7 +114,6 @@
     "name": "Deciding on a repository for your research data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #7",
-    "courseCode": "7",
     "keywords": [
       "EDEN registry",
       "re3data",
@@ -137,7 +129,6 @@
     "name": "Aligning data to community norms",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #8",
-    "courseCode": "8",
     "keywords": [
       "community watch",
       "community engagement",
@@ -153,7 +144,6 @@
     "name": "Preparing deposits - file formats and technical data quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Manager Module #9",
-    "courseCode": "9",
     "keywords": [
       "community watch",
       "community engagement",
@@ -168,8 +158,7 @@
     "id": "metadata-researchers",
     "name": "Preparing metadata - reusing information and metadata quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
-    "discipline": "Manager Module #1",
-    "courseCode": "10",
+    "discipline": "Manager Module #10",
     "keywords": [
       "community watch",
       "community engagement",
@@ -185,7 +174,6 @@
     "name": "Negotiating quality optimisation - technical, metadata, contextual quality",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #1",
-    "courseCode": "11",
     "keywords": [
       "community watch",
       "community engagement",
@@ -201,7 +189,6 @@
     "name": "Understanding rights and defining terms for reuse of the data",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #2",
-    "courseCode": "2",
     "keywords": [
       "community watch",
       "community engagement",
@@ -217,7 +204,6 @@
     "name": "Teaching Data Management",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #3",
-    "courseCode": "3",
     "keywords": [
       "teaching",
       "workshop",
@@ -233,7 +219,6 @@
     "name": "Curriculum Design for Data Literacy",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #4",
-    "courseCode": "4",
     "keywords": [
       "curriculum",
       "workshop",
@@ -249,7 +234,6 @@
     "name": "Measuring Training Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Researcher Module #5",
-    "courseCode": "5",
     "keywords": [
       "evaluation",
       "feedback",
@@ -265,7 +249,6 @@
     "name": "Measuring progress Impact",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #1",
-    "courseCode": "1",
     "keywords": [
       "evaluation",
       "feedback",
@@ -281,7 +264,6 @@
     "name": "Assessing Training Import",
     "description": "Morbi convallis auctor augue quis pharetra. Vestibulum convallis ligula sed fringilla facilisis. Cras dignissim condimentum mauris, et pellentesque tortor pharetra ac. Morbi dignissim facilisis elit id consequat. Donec sollicitudin dictum arcu eu euismod. Curabitur in odio ac mi semper tincidunt. Morbi venenatis, elit id rhoncus maximus, enim lorem tristique nulla, vitae tristique ante libero non nibh. Vivamus sed euismod risus.",
     "discipline": "Trainer Module #2",
-    "courseCode": "2",
     "keywords": [
       "evaluation",
       "feedback",
