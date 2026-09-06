@@ -153,7 +153,8 @@ class KitApp {
       requestAnimationFrame(() => this._scrollToAnchor(url.hash));
     } else if (tag) {
       this._state.activeId = null;
-      this._state.tagFilter = decodeURIComponent(tag);
+      // FIXED: url.searchParams.get already returns decoded value — avoid double-decode
+      this._state.tagFilter = tag;
       this._filter(true);
     } else {
       this._state.activeId = null;
@@ -233,8 +234,9 @@ class KitApp {
         const tb = b.track;
         if (ta !== tb) return ta.localeCompare(tb);
         
-        const orderA = parseInt(a.order || 0, 100);
-        const orderB = parseInt(b.order || 0, 100);
+        // FIXED: Correct radix for parseInt
+        const orderA = parseInt(a.order || 0, 10);
+        const orderB = parseInt(b.order || 0, 10);
         return orderA - orderB;
       });
     }
@@ -292,7 +294,8 @@ class KitApp {
     const tagsHtml = articleTags.map((tag) => {
       const activeCls = tag === this._state.tagFilter ? ' active' : '';
       const tagHtml = this._highlight(tag, words);
-      return `<button class="badge tag-click-btn${activeCls}" data-tag="${tag}">#${tagHtml}</button>`;
+      // FIXED: escape attribute value for data-tag
+      return `<button class="badge tag-click-btn${activeCls}" data-tag="${this._escapeHtml(tag)}">#${tagHtml}</button>`;
     }).join(' ');
 
     let expandedHtml = '';
@@ -385,7 +388,9 @@ class KitApp {
     const tags = new Set();
     this._state.all.forEach((a) => {
       const currentTags = a.keywords || a.tags || [];
-      currentTags.forEach((t) => tags.add(t.trim()));
+      currentTags.forEach((t) => {
+        if (typeof t === 'string' && t.trim()) tags.add(t.trim());
+      });
     });
     
     if (tags.size === 0) {
@@ -397,7 +402,8 @@ class KitApp {
       .sort()
       .map((tag) => {
         const active = tag === this._state.tagFilter ? ' active' : '';
-        return `<button class="global-tag-btn${active}" data-tag="${tag}">#${this._escapeHtml(tag)}</button>`;
+        // FIXED: escape attribute value for data-tag
+        return `<button class="global-tag-btn${active}" data-tag="${this._escapeHtml(tag)}">#${this._escapeHtml(tag)}</button>`;
       })
       .join(' ');
   }
