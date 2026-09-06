@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Kit Learning App</title>
+    <style>
+        /* Minimalistisk basis-styling for struktur og synlighet under utvikling */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 8px 12px;
+            font-size: 1rem;
+            width: 300px;
+        }
+        .active-search {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        .invisible {
+            display: none !important;
+        }
+        .hidden {
+            display: none !important;
+        }
+        .filter-group {
+            margin: 15px 0;
+            display: flex;
+            gap: 8px;
+        }
+        button {
+            padding: 6px 12px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: #fff;
+            border-radius: 4px;
+        }
+        button.active {
+            background: #3b82f6;
+            color: #fff;
+            border-color: #2563eb;
+        }
+        #globalTagCloud {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f1f5f9;
+            border-radius: 6px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.8rem;
+            background: #e2e8f0;
+            border-radius: 9999px;
+            border: none;
+        }
+        .tag-click-btn.active, .global-tag-btn.active {
+            background: #10b981;
+            color: white;
+        }
+        #articlesContainer article {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .full-content {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .learning-path-actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        #searchCounter {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        #noResults {
+            padding: 20px;
+            background: #fef2f2;
+            color: #991b1b;
+            border-radius: 6px;
+            text-align: center;
+        }
+        #loadMoreWrapper {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Support Kit Learning Platform</h1>
+        
+        <!-- Spor-filtrering (Track-knapper) -->
+        <div class="filter-group">
+            <button class="filter-btn active" data-track="all">Alle spor</button>
+            <button class="filter-btn" data-track="info">Informasjon</button>
+            <button class="filter-btn" data-track="managers">Ledere (Managers)</button>
+            <button class="filter-btn" data-track="researchers">Forskere (Researchers)</button>
+            <button class="filter-btn" data-track="trainers">Instruktører (Trainers)</button>
+        </div>
+
+        <!-- Søk og nullstilling -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Søk i moduler (min. 3 tegn)..." autocomplete="off">
+            <button id="resetSearchBtn" class="invisible">Nullstill søk</button>
+            
+            <!-- Vis/skjul emneknagger -->
+            <label style="margin-left: 15px; font-size: 0.9rem; cursor: pointer;">
+                <input type="checkbox" id="tagToggleCheckbox" checked> Vis emneknagger
+            </label>
+        </div>
+
+        <!-- Global emneknaggsky (Tag Cloud) -->
+        <div id="globalTagCloud" class="hidden"></div>
+    </header>
+
+    <main>
+        <!-- Statusmeldinger for søk -->
+        <div id="searchCounter">Laster moduler...</div>
+
+        <!-- Melding hvis ingen treff finnes -->
+        <div id="noResults" class="hidden">Ingen moduler matchet søket ditt eller filtrene dine.</div>
+
+        <!-- Her blir JSON-modulene tegnet ut dynamisk av KitApp -->
+        <section id="articlesContainer"></section>
+
+        <!-- Last mer-knapp for paginering -->
+        <div id="loadMoreWrapper" class="hidden">
+            <button id="loadMoreBtn" style="padding: 10px 24px; font-weight: bold;">Last flere moduler</button>
+        </div>
+    </main>
+
+    <!-- Nødvendig eksternt bibliotek for at KitApp skal kunne rendre Markdown-tekst -->
+    <script src="https://cloudflare.com"></script>
+
+    <!-- Her limer du inn JavaScript-koden din (app.js eller lignende) -->
+    <script src="app.js"></script>
+</body>
+</html>
