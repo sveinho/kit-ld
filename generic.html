@@ -4,113 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Kit Learning App</title>
-    <style>
-        /* Minimalistisk basis-styling for struktur og synlighet under utvikling */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fcfcfc;
-            color: #333;
-        }
-        header {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .search-box {
-            margin: 15px 0;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        input[type="text"] {
-            padding: 8px 12px;
-            font-size: 1rem;
-            width: 300px;
-        }
-        .active-search {
-            border-color: #3b82f6;
-            background-color: #eff6ff;
-        }
-        .invisible {
-            display: none !important;
-        }
-        .hidden {
-            display: none !important;
-        }
-        .filter-group {
-            margin: 15px 0;
-            display: flex;
-            gap: 8px;
-        }
-        button {
-            padding: 6px 12px;
-            cursor: pointer;
-            border: 1px solid #ccc;
-            background: #fff;
-            border-radius: 4px;
-        }
-        button.active {
-            background: #3b82f6;
-            color: #fff;
-            border-color: #2563eb;
-        }
-        #globalTagCloud {
-            margin: 15px 0;
-            padding: 10px;
-            background: #f1f5f9;
-            border-radius: 6px;
-        }
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            font-size: 0.8rem;
-            background: #e2e8f0;
-            border-radius: 9999px;
-            border: none;
-        }
-        .tag-click-btn.active, .global-tag-btn.active {
-            background: #10b981;
-            color: white;
-        }
-        #articlesContainer article {
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .full-content {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed #e2e8f0;
-        }
-        .learning-path-actions {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
-        #searchCounter {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 15px;
-        }
-        #noResults {
-            padding: 20px;
-            background: #fef2f2;
-            color: #991b1b;
-            border-radius: 6px;
-            text-align: center;
-        }
-        #loadMoreWrapper {
-            text-align: center;
-            margin: 30px 0;
-        }
-    </style>
+   <style>
+    /* Moderne, global reset og CSS-variabler */
+    :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --border-color: #e2e8f0;
+        --primary: #0f172a;       /* Moderne, dyp tilnærming i stedet for standard blå */
+        --primary-hover: #1e293b;
+        --accent: #10b981;        /* Grønnfargen din for aktive tagger */
+        --accent-light: #ecfdf5;
+        --radius-sm: 6px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 24px;
+        margin-bottom: 32px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin: 0;
+    }
+
+    /* Søkeboks og Input */
+    .search-box {
+        margin: 24px 0;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 360px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-card);
+        border-radius: var(--radius-md);
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        transition: var(--transition);
+    }
+
+    input[type="text"]:focus,
+    .active-search {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.08);
+        background-color: var(--bg-card);
+    }
+
+    /* Knapper og Filter-grupper */
+    .filter-group {
+        margin: 24px 0;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        border: 1px solid var(--border-color);
+        background: var(--bg-card);
+        color: var(--text-main);
+        border-radius: var(--radius-md);
+        transition: var(--transition);
+    }
+
+    button:hover {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+    }
+
+    button.active {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+    }
+
+    button.active:hover {
+        background: var(--primary-hover);
+    }
+
+    /* Tag Clouds og Badges */
+    #globalTagCloud {
+        margin: 24px 0;
+        padding: 16px;
+        background: #f1f5f9;
+        border-radius: var(--radius-md);
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        background: #e2e8f0;
+        color: #475569;
+        border-radius: var(--radius-lg);
+        border: none;
+        transition: var(--transition);
+    }
+
+    .tag-click-btn.active, 
+    .global-tag-btn.active {
+        background: var(--accent);
+        color: white;
+    }
+
+    .tag-click-btn.active:hover, 
+    .global-tag-btn.active:hover {
+        background: #059669;
+    }
+
+    /* Artikler / Kort */
+    #articlesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #articlesContainer article {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 28px;
+        margin-bottom: 0; /* Håndteres av gap over */
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+    }
+
+    #articlesContainer article:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    }
+
+    #articlesContainer article h2, 
+    #articlesContainer article h3 {
+        margin-top: 0;
+        font-size: 1.35rem;
+        letter-spacing: -0.02em;
+    }
+
+    .full-content {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed var(--border-color);
+        color: #334155;
+    }
+
+    /* Teller, Handlinger og Tilstander */
+    #searchCounter {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+        font-weight: 500;
+    }
+
+    .learning-path-actions {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+    }
+
+    #noResults {
+        padding: 32px;
+        background: #fef2f2;
+        color: #991b1b;
+        border-radius: var(--radius-md);
+        text-align: center;
+        border: 1px solid #fecaca;
+        font-weight: 500;
+    }
+
+    #loadMoreWrapper {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    /* Strukturelle hjelpeklasser som kreves av JS */
+    .invisible, .hidden {
+        display: none !important;
+    }
+</style>
+
 </head>
 <body>
 
