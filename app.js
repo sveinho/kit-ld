@@ -30,7 +30,7 @@ const slugify = (text) =>
   text
     ?.trim()
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
+    .replace(/[^^\w\s-]/g, '')
     .replace(/\s+/g, '-') ?? 'heading';
 
 const injectHeadingIds = (container, articleId) => {
@@ -385,8 +385,14 @@ class KitApp {
     const cloud = this._refs.globalTagCloud;
     if (!cloud) return;
 
+    // Use the current track filter as the source for tags. When track = 'all' we use all items.
+    const sourceItems =
+      this._state.trackFilter && this._state.trackFilter !== 'all'
+        ? this._state.all.filter((a) => a.track === this._state.trackFilter)
+        : this._state.all;
+
     const tags = new Set();
-    this._state.all.forEach((a) => {
+    sourceItems.forEach((a) => {
       const currentTags = a.keywords || a.tags || [];
       currentTags.forEach((t) => {
         if (typeof t === 'string' && t.trim()) tags.add(t.trim());
@@ -454,6 +460,18 @@ class KitApp {
     this._state.trackFilter = track;
     this._filterButtons.forEach((b) => b.classList.toggle('active', b === activeBtn));
     
+    // If a tag is selected but it doesn't exist in the newly selected track, clear it.
+    if (this._state.tagFilter && track !== 'all') {
+      const tagStillExists = this._state.all.some((a) => {
+        if (a.track !== track) return false;
+        const tags = a.keywords || a.tags || [];
+        return tags.includes(this._state.tagFilter);
+      });
+      if (!tagStillExists) {
+        this._state.tagFilter = null;
+      }
+    }
+
     const activeArticle = this._state.activeId
       ? this._state.all.find((a) => a["@id"] === this._state.activeId)
       : null;
