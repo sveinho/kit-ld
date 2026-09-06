@@ -501,19 +501,6 @@ class KitApp {
     
     const article = this._state.all.find((a) => (a["@id"] || a.id) === id);
     
-    if (article && !article.text && !article.body && !article.markdownContent && article.url) {
-      try {
-        const res = await fetch(article.url);
-        if (res.ok) {
-          const fullModuleData = await res.json();
-          article.text = fullModuleData.text || fullModuleData.body || fullModuleData.markdownContent;
-        }
-      } catch (err) {
-        console.error('Lazy loading failed for selected module JSON file:', err);
-        article.text = '<p class="error">Kunne ikke laste innhold.</p>';
-      }
-    }
-    
     const targetParams = { id };
     if (this._state.trackFilter && this._state.trackFilter !== 'all') {
       targetParams.track = this._state.trackFilter;
