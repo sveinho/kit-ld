@@ -143,7 +143,9 @@ class KitApp {
     const query = url.searchParams.get('q'); 
 
     this._state.trackFilter = track || 'all';
-    this._state.query = query || ''; 
+    
+    // SAMMENKOBLING: Bruk eksisterende søkespørring, eller fyll inn aktiv tag som et søketips
+    this._state.query = query || tag || ''; 
     
     if (this._refs.searchInput) {
       this._refs.searchInput.value = this._state.query;
@@ -166,8 +168,10 @@ class KitApp {
     }
 
     this._renderGlobalTagCloud();
+    this._highlightMatchingTags(); // Oppdaterer hvilke tags som skal lyse opp
     this._syncResetButton();
   }
+
   async _loadArticles() {
     const { articlesContainer } = this._refs;
     try {
@@ -186,7 +190,6 @@ class KitApp {
       }
     }
   }
-
   _filter(resetPagination = false) {
     const words = this._state.query.split(/\s+/).filter(Boolean);
     const isSearching = words.length > 0;
@@ -325,7 +328,7 @@ class KitApp {
       
       const nextId = next ? next["@id"] : null;
       const nextBtn = next
-        ? `<button class="next-step-btn" data-next-id="${this._escapeHtml(nextId)}">Neste modul →</button>`
+        ? `<button class="next-step-btn" data-next-id="${this._escapeHtml(nextId)}">Next modul →</button>`
         : '';
 
       expandedHtml = `
@@ -403,6 +406,23 @@ class KitApp {
       .join(' ');
   }
 
+  // NY METODE: Skanner skyen og legger til en CSS-fremheving på matchende tags som tips til brukeren
+  _highlightMatchingTags() {
+    const query = this._state.query.trim().toLowerCase();
+    const tagButtons = this._refs.globalTagCloud?.querySelectorAll('.global-tag-btn');
+    if (!tagButtons) return;
+
+    tagButtons.forEach(btn => {
+      const tagText = btn.dataset.tag.toLowerCase();
+      // Hvis brukeren har tastet inn minst 2 tegn og taggen inneholder søkeordet
+      if (query.length >= 2 && tagText.includes(query)) {
+        btn.classList.add('tag-suggestion-highlight');
+      } else {
+        btn.classList.remove('tag-suggestion-highlight');
+      }
+    });
+  }
+
   _updateSearchUI() {
     const { searchCounter, noResults } = this._refs;
     const { filtered, query, tagFilter } = this._state;
@@ -425,7 +445,7 @@ class KitApp {
       this._state.query = '';
       const { searchCounter } = this._refs;
       if (searchCounter) {
-        searchCounter.textContent = 'Skriv minst 3 tegn for å søke...';
+        searchCounter.textContent = 'Minimum 3 letters when searching...';
       }
       return;
     }
@@ -441,6 +461,7 @@ class KitApp {
     if (this._state.activeId) targetParams.id = this._state.activeId;
     
     this._syncUrl(targetParams);
+    this._highlightMatchingTags(); // Utløser belysning av tags ved søkeskriving
   }
 
   _setTrackFilter(track, activeBtn) {
@@ -476,6 +497,7 @@ class KitApp {
     
     this._syncUrl(targetParams);
     this._renderGlobalTagCloud();
+    this._highlightMatchingTags(); // Sikrer rett highlighting etter spor-bytte
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -483,6 +505,12 @@ class KitApp {
     const isActive = this._state.tagFilter === tag;
     this._state.tagFilter = isActive ? null : tag;
     
+    // SAMMENKOBLING: Når man velger en tag, fylles søkefeltet automatisk ut med tag-navnet
+    if (this._refs.searchInput) {
+      this._refs.searchInput.value = isActive ? '' : tag;
+      this._state.query = isActive ? '' : tag.toLowerCase();
+    }
+
     const targetParams = {};
     if (this._state.trackFilter && this._state.trackFilter !== 'all') {
       targetParams.track = this._state.trackFilter;
@@ -494,6 +522,7 @@ class KitApp {
     this._syncUrl(targetParams);
     this._syncResetButton();
     this._renderGlobalTagCloud();
+    this._highlightMatchingTags(); // Resetter eller aktiverer glød på valgt tag
   }
 
   async _selectModule(id, hash = '') {
@@ -639,7 +668,7 @@ class KitApp {
     }
   }
 
-   _scrollToAnchor(rawHash = '') {
+  _scrollToAnchor(rawHash = '') {
     const hash = rawHash.startsWith('#') ? rawHash.slice(1) : rawHash;
     const expanded = this._refs.articlesContainer?.querySelector(
       `[data-id="${this._state.activeId}"]`
@@ -661,65 +690,86 @@ class KitApp {
   }
 
   _createSearchSnippet(textObj, queryWords) {
-    if (!textObj || !queryWords.length) return '';
-    const rawText = typeof textObj === 'object' ? (textObj.text || '') : textObj;
-    if (!rawText) return '';
+  if (!textObj || !queryWords || !queryWords.length) return '';
+  const rawText = typeof textObj === 'object' ? (textObj.text || '') : textObj;
+  if (!rawText) return '';
 
-    const cleanText = rawText.replace(/[#*`_\[\]()|]/g, ' ').replace(/\s+/g, ' ');
-    const lowerText = cleanText.toLowerCase();
-    
-    const firstWord = queryWords || '';
-    if (!firstWord) return '';
-    
-    const index = lowerText.indexOf(firstWord.toLowerCase());
-    if (index === -1) return '';
+  const lowerRawText = rawText.toLowerCase();
+  const firstWord = queryWords[0] || '';
+  if (!firstWord) return '';
 
-    const start = Math.max(0, index - 60);
-    const end = Math.min(cleanText.length, index + 100);
-    
-    let snippet = cleanText.slice(start, end).trim();
-    if (start > 0) snippet = '...' + snippet;
-    if (cleanText.length > end) snippet = snippet + '...';
-    
-    return this._highlight(snippet, queryWords);
-  }
+  const index = lowerRawText.indexOf(firstWord.toLowerCase());
+  if (index === -1) return '';
 
-  _getMarkdownRenderer() {
-    if (this._md) return this._md;
-    const ctor = typeof window.markdownit === 'function' ? window.markdownit : null;
-    this._md = ctor ? ctor({ html: true, linkify: true }) : null;
-    return this._md;
-  }
+  let sectionTitle = '';
+  const textBeforeMatch = rawText.slice(0, index);
+  const linesBefore = textBeforeMatch.split('\n');
 
-  _escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = String(str);
-    return div.innerHTML;
-  }
-
-  _highlight(text, words) {
-    if (!words.length || !text) return this._escapeHtml(text);
-    const safeWords = words
-      .map((w) => w.replace(/^\./, ''))
-      .filter(Boolean)
-      .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-    if (!safeWords.length) return this._escapeHtml(text);
-
-    const escapedText = this._escapeHtml(text);
-    const re = new RegExp(`(${safeWords.join('|')})`, 'gi');
-    return escapedText.replace(re, '<mark>$1</mark>');
-  }
-
-  _syncResetButton() {
-    const { searchInput, resetBtn } = this._refs;
-    const hasText = searchInput && searchInput.value.trim().length > 0;
-    
-    resetBtn?.classList.toggle('invisible', !hasText);
-    
-    if (searchInput) {
-      searchInput.classList.toggle('active-search', hasText);
+  for (let i = linesBefore.length - 1; i >= 0; i--) {
+    const line = linesBefore[i].trim();
+    if (line.startsWith('#')) {
+      sectionTitle = line.replace(/^#+\s*/, '').trim();
+      break;
     }
   }
+
+  const cleanText = rawText.replace(/[#*`_\[\]()|]/g, ' ').replace(/\s+/g, ' ');
+  const lowerCleanText = cleanText.toLowerCase();
+  const cleanIndex = lowerCleanText.indexOf(firstWord.toLowerCase());
+
+  const start = Math.max(0, cleanIndex - 150);
+  const end = Math.min(cleanText.length, cleanIndex + 250);
+
+  let snippet = cleanText.slice(start, end).trim();
+  if (start > 0) snippet = '...' + snippet;
+  if (cleanText.length > end) snippet = snippet + '...';
+
+  const highlightedSnippet = this._highlight(snippet, queryWords);
+
+  if (sectionTitle) {
+    const escapedSection = this._escapeHtml(sectionTitle);
+    return `<span class="snippet-section" style="display:block; font-weight:bold; color:#1e3a8a; margin-bottom:4px; font-style:normal;">📌 ${escapedSection}</span>${highlightedSnippet}`;
+  }
+
+  return highlightedSnippet;
+}
+
+_getMarkdownRenderer() {
+  if (this._md) return this._md;
+  const ctor = typeof window.markdownit === 'function' ? window.markdownit : null;
+  this._md = ctor ? ctor({ html: true, linkify: true }) : null;
+  return this._md;
+}
+
+_escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = String(str);
+  return div.innerHTML;
+}
+
+_highlight(text, words) {
+  if (!words.length || !text) return this._escapeHtml(text);
+  const safeWords = words
+    .map((w) => w.replace(/^\./, ''))
+    .filter(Boolean)
+    .map((w) => w.replace(/[.*+?^\${}()|\[\]\\]/g, '\\$&'));
+  if (!safeWords.length) return this._escapeHtml(text);
+
+  const escapedText = this._escapeHtml(text);
+  const re = new RegExp(`(${safeWords.join('|')})`, 'gi');
+  return escapedText.replace(re, '<mark>\$1</mark>');
+}
+
+_syncResetButton() {
+  const { searchInput, resetBtn } = this._refs;
+  const hasText = searchInput && searchInput.value.trim().length > 0;
+  
+  resetBtn?.classList.toggle('invisible', !hasText);
+  
+  if (searchInput) {
+    searchInput.classList.toggle('active-search', hasText);
+  }
+}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
