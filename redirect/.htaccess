@@ -1,7 +1,0 @@
-Options +FollowSymLinks
-
-# Rewrite engine setup
-RewriteEngine On
-
-# Redirect to w3id.org/ADO/
-RewriteRule	^$ https://kunstpauser.no/index.html [R=302,L]
