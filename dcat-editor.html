@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCAT-AP Repository Editor</title>
+    
+    <!-- JSONEditor CSS og JS fra CDN -->
+    <link href="https://cloudflare.com" rel="stylesheet" type="text/css">
+    <script src="https://cloudflare.com"></script>
+
+    <!-- Kobling til din egen CSS-fil -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>DCAT-AP-NO Repository Editor</h2>
+    
+    <div class="info-box">
+        <strong>Slik fungerer det:</strong> Editoren transformerer automatisk den flate <code>@graph</code>-listen til en brukervennlig, 
+        nøstet struktur under redigering. Ved eksport bygges filen tilbake til en gyldig og maskinlesbar DCAT-AP JSON-LD-standard.
+    </div>
+
+    <div class="actions">
+        <!-- Knapp for å laste inn fil -->
+        <label for="file-upload" class="btn">📂 Last inn JSON-LD-fil</label>
+        <input type="file" id="file-upload" accept=".json,.jsonld" />
+        
+        <!-- Knapp for å eksportere fil -->
+        <button onclick="exportJsonLd()">💾 XML/JSON-LD Eksport</button>
+        
+        <!-- Knapp for å laste inn test-mockup -->
+        <button class="btn-secondary" onclick="loadMockup()">✨ Last inn eksempel-mockup</button>
+    </div>
+
+    <!-- Containeren der JSONEditor rendres -->
+    <div id="jsoneditor"></div>
+</div>
+
+<!-- Kobling til din egen JS-fil -->
+<script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f6f9;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.actions {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+button, label.btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+button:hover, label.btn:hover {
+    background-color: #004085;
+}
+.btn-secondary {
+    background-color: #6c757d;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+input[type="file"] {
+    display: none;
+}
+#jsoneditor {
+    width: 100%;
+    height: 650px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.info-box {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    border-left: 5px solid #0056b3;
+}
+// Initialiser JSONEditor på containeren
+const container = document.getElementById("jsoneditor");
+const options = {
+    mode: 'tree',
+    modes: ['tree', 'code', 'text'],
+    name: 'DigitalRepositoryCatalog'
+};
+const editor = new JSONEditor(container, options);
+
+// Global variabel for å ta vare på @context fra filen som åpnes
+let currentContext = {};
+
+// 1. TRANSFORMASJON: Fra flat @graph til nøstet tre-struktur (Før visning i editor)
+function transformToEditorFormat(jsonLd) {
+    currentContext = jsonLd["@context"] || {};
+    const graph = jsonLd["@graph"] || [];
+    
+    const catalog = graph.find(item => item.type === "dcat:Catalog");
+    if (!catalog) {
+        alert("Kunne ikke finne et dcat:Catalog-element i filen.");
+        return jsonLd;
+    }
+
+    const dataServices = graph.filter(item => item.type === "dcat:DataService");
+    const datasets = graph.filter(item => item.type === "dcat:Dataset");
+    const distributions = graph.filter(item => item.type === "dcat:Distribution");
+    const agents = graph.filter(item => item.type === "foaf:Agent");
+
+    if (typeof catalog.publisher === "string") {
+        const foundAgent = agents.find(a => a.id === catalog.publisher);
+        if (foundAgent) catalog.publisher = foundAgent;
+    }
+    
+    if (Array.isArray(catalog.service)) {
+        catalog.service = catalog.service.map(serviceUri => {
+            const foundService = dataServices.find(s => s.id === serviceUri);
+            if (foundService) {
+                const cleanService = {...foundService};
+                delete cleanService.servesDataset; 
+                return cleanService;
+            }
+            return serviceUri;
+        });
+    }
+
+    if (Array.isArray(catalog.dataset)) {
+        catalog.dataset = catalog.dataset.map(datasetUri => {
+            const foundDataset = datasets.find(d => d.id === datasetUri);
+            if (foundDataset) {
+                const nestedDataset = {...foundDataset};
+                if (Array.isArray(nestedDataset.distribution)) {
+                    nestedDataset.distribution = nestedDataset.distribution.map(distUri => {
+                        const foundDist = distributions.find(dist => dist.id === distUri);
+                        return foundDist || distUri;
+                    });
+                }
+                return nestedDataset;
+            }
+            return datasetUri;
+        });
+    }
+
+    return { "catalog": catalog };
+}
+
+// 2. TRANSFORMASJON: Fra nøstet tre-struktur tilbake til flat @graph (Før eksport)
+function transformToValidJsonLd(editorJson) {
+    if (!editorJson.catalog) return editorJson;
+    
+    const catalog = JSON.parse(JSON.stringify(editorJson.catalog)); 
+    const graph = [];
+
+    if (catalog.publisher && typeof catalog.publisher === "object") {
+        graph.push(catalog.publisher);
+        catalog.publisher = catalog.publisher.id; 
+    }
+
+    if (Array.isArray(catalog.service)) {
+        catalog.service = catalog.service.map(service => {
+            if (typeof service === "object" && service.id) {
+                service.servesDataset = [catalog.id]; 
+                graph.push(service);
+                return service.id; 
+            }
+            return service;
+        });
+    }
+
+    if (Array.isArray(catalog.dataset)) {
+        catalog.dataset = catalog.dataset.map(dataset => {
+            if (typeof dataset === "object" && dataset.id) {
+                if (Array.isArray(dataset.distribution)) {
+                    dataset.distribution = dataset.distribution.map(dist => {
+                        if (typeof dist === "object" && dist.id) {
+                            graph.push(dist); 
+                            return dist.id; 
+                        }
+                        return dist;
+                    });
+                }
+                graph.push(dataset); 
+                return dataset.id;
+            }
+            return dataset;
+        });
+    }
+
+    graph.push(catalog);
+
+    return {
+        "@context": currentContext,
+        "@graph": graph
+    };
+}
+
+// Lytte etter filopplasting
+document.getElementById('file-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const originalJson = JSON.parse(e.target.result);
+            const visualTree = transformToEditorFormat(originalJson);
+            editor.set(visualTree);
+            editor.expandAll();
+        } catch (err) {
+            alert("Feil ved parsing av JSON-fil: " + err.message);
+        }
+    };
+    reader.readAsText(file);
+});
+
+// Eksporter filfunksjon
+function exportJsonLd() {
+    try {
+        const editorContent = editor.get();
+        const validJsonLd = transformToValidJsonLd(editorContent);
+        
+        const blob = new Blob([JSON.stringify(validJsonLd, null, 2)], {type: "application/ld+json"});
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = "dcat-ap-repository.jsonld";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    } catch (err) {
+        alert("Kunne ikke eksportere data: " + err.message);
+    }
+}
+
+// Last inn standard mockup-eksempel
+function loadMockup() {
+    const mockup = {
+      "@context": {
+        "dcat": "http://w3.org",
+        "dct": "http://purl.org",
+        "foaf": "http://xmlns.com",
+        "xsd": "http://w3.org",
+        "vcard": "http://w3.org",
+        "id": "@id",
+        "type": "@type",
+        "title": { "@id": "dct:title", "@container": "@language" },
+        "description": { "@id": "dct:description", "@container": "@language" },
+        "publisher": { "@id": "dct:publisher", "@type": "@id" },
+        "dataset": { "@id": "dcat:dataset", "@type": "@id" },
+        "service": { "@id": "dcat:service", "@type": "@id" },
+        "endpointURL": { "@id": "dcat:endpointURL", "@type": "@id" },
+        "distribution": { "@id": "dcat:distribution", "@type": "@id" },
+        "format": { "@id": "dct:format", "@type": "@id" },
+        "name": "foaf:name"
+      },
+      "@graph": [
+        {
+          "id": "https://arkivinstitusjon.no",
+          "type": "dcat:Catalog",
+          "title": { "no": "Nasjonalt Digitalt Forskningsarkiv" },
+          "description": { "no": "Et åpent digitalt arkiv for langtidslagring av forskningsdata." },
+          "publisher": "https://organization.no",
+          "dataset": ["https://arkivinstitusjon.no/dataset/ds001"],
+          "service": ["https://arkivinstitusjon.no/api/oai-pmh"]
+        },
+        {
+          "id": "https://arkivinstitusjon.no/api/oai-pmh",
+          "type": "dcat:DataService",
+          "title": { "no": "OAI-PMH Endepunkt" },
+          "endpointURL": "https://arkivinstitusjon.no/oai"
+        },
+        {
+          "id": "https://arkivinstitusjon.no/dataset/ds001",
+          "type": "dcat:Dataset",
+          "title": { "no": "Klimadata for Nord-Norge (2020-2025)" },
+          "distribution": ["https://arkivinstitusjon.no/dataset/ds001/dist-csv"]
+        },
+        {
+          "id": "https://arkivinstitusjon.no/dataset/ds001/dist-csv",
+          "type": "dcat:Distribution",
+          "title": { "no": "CSV distribusjon" },
+          "format": "http://europa.eu"
+        },
+        {
+          "id": "https://organization.no",
+          "type": "foaf:Agent",
+          "name": "Arkivinstitusjonen"
+        }
+      ]
+    };
+
+    const visualTree = transformToEditorFormat(mockup);
+    editor.set(visualTree);
+    editor.expandAll();
+}
+
+// Kjør automatisk ved oppstart
+loadMockup();
