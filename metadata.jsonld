@@ -1,36 +1,64 @@
 {
-  "@context": "https://schema.org",
+  "@context": {
+    "dcat": "http://w3.org",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com",
+    "rdfs": "http://w3.org",
+    "vcard": "http://w3.org",
+    "cpsv": "http://purl.org",
+    "cv": "http://europa.eu",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
   "@graph": [
     {
-      "@type": "CollectionPage",
-      "@id": "https://example.com",
-      "url": "https://example.com",
-      "name": "Support Kit Learning Platform",
-      "description": "A modular learning resource for researchers, managers, and trainers.",
-      "hasPart": [
-        { "@id": "https://example.com#navigating-kit" },
-        { "@id": "https://example.com#data-management-researchers" }
-      ]
+      "@id": "https://example.org",
+      "@type": "dcat:Catalog",
+      "dct:title": { "@language": "en", "@value": "City Open Data Catalog" },
+      "dct:description": { "@language": "en", "@value": "Official open data catalog containing public datasets and services from the city administration." },
+      "dct:publisher": { "@id": "https://example.org" },
+      "dct:language": { "@id": "http://europa.eu" },
+      "dcat:themeTaxonomy": { "@id": "http://europa.eu" },
+      "dcat:dataset": { "@id": "https://example.org" },
+      "dcat:service": { "@id": "https://example.org" }
     },
     {
-      "@type": "CreativeWork",
-      "@id": "https://example.com#navigating-kit",
-      "name": "Navigating the support kit",
-      "abstract": "First you will need to choose a learning path to get started. Choose the one that aligns best with your relevant role: researcher, manager or trainer. The same topic can often be described within all three learning paths and based on this: You should limit your search or widening it to include the wanted learning paths (either one or all). You will need to use three or more letters in a search. All modules are interactive and can be opened or closed according to your preference. Hopefully, this is enough information to navigate this resource. Lets get started.",
-      "genre": "Information",
-      "keywords": ["guidance", "raw-data"],
-      "educationalUse": "info",
-      "isPartOf": { "@id": "https://example.com" }
+      "@id": "https://example.org",
+      "@type": "foaf:Agent",
+      "foaf:name": { "@language": "en", "@value": "City Hall Open Data Department" }
     },
     {
-      "@type": "CreativeWork",
-      "@id": "https://example.com#data-management-researchers",
-      "name": "Planning data sharing in research projects",
-      "abstract": "Learn how to structure and document your raw research data to meet standards and open-science policies.",
-      "genre": "Researcher Module #1",
-      "keywords": ["fair", "quality", "metadata"],
-      "educationalUse": "researchers",
-      "isPartOf": { "@id": "https://example.com" }
+      "@id": "https://example.org",
+      "@type": "dcat:Distribution",
+      "dct:title": { "@language": "en", "@value": "Air Quality CSV Distribution" },
+      "dcat:accessURL": { "@id": "https://example.org" },
+      "dct:accessService": { "@id": "https://example.org" },
+      "dct:format": { "@id": "http://europa.eu" },
+      "dct:license": { "@id": "http://europa.eu" }
+    },
+    {
+      "@id": "https://example.org",
+      "@type": "dcat:DataService",
+      "dct:title": { "@language": "en", "@value": "City Air Quality Real-Time API" },
+      "dct:description": { "@language": "en", "@value": "REST API providing live streaming metrics for environmental sensors." },
+      "dcat:endpointURL": { "@id": "https://example.org" },
+      "dcat:endpointDescription": { "@id": "https://example.org" },
+      "dcat:servesDataset": { "@id": "https://example.org" }
+    },
+    {
+      "@id": "https://example.org",
+      "@type": "cpsv:PublicService",
+      "dct:title": { "@language": "en", "@value": "Public Environmental Monitoring Service" },
+      "dct:description": { "@language": "en", "@value": "The statutory municipal service tracking local ecological and atmospheric conditions." },
+      "cv:hasCompetentAuthority": { "@id": "https://example.org" },
+      "foaf:homepage": { "@id": "https://example.org" },
+      "dct:relation": { "@id": "https://example.org" }
+    },
+    {
+      "@id": "https://example.org",
+      "@type": "vcard:Kind",
+      "vcard:fn": "Environment Data Support Team",
+      "vcard:hasEmail": { "@id": "mailto:data-support@example.org" }
     }
   ]
 }
+
